@@ -81,8 +81,8 @@ const DataContainer = () => {
       <button onClick={() => {loadDecade(2020, 2023)}}>Load 2020s film crew</button>
       <h2>Most popular movies of the decade</h2>
       <ul>{decadeListItems}</ul>
-      <PeopleList filmCrewData={filmCrewData} onPersonSelect={onPersonSelect}/>
-      {personInfo ? <PersonInfo person={selectedPerson} personInfo={personInfo}/> : null}
+      <PeopleList  filmCrewData={filmCrewData} onPersonSelect={onPersonSelect}/>
+      {personInfo ? <PersonInfo className="person-info" person={selectedPerson} personInfo={personInfo}/> : null}
     </div>
   );
 };
