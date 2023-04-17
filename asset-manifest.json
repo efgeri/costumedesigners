@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/costumedesigners/static/css/main.ad712cdd.css",
-    "main.js": "/costumedesigners/static/js/main.a1027a2c.js",
+    "main.css": "/costumedesigners/static/css/main.9e5194f6.css",
+    "main.js": "/costumedesigners/static/js/main.30a146a7.js",
     "static/js/787.108167ee.chunk.js": "/costumedesigners/static/js/787.108167ee.chunk.js",
     "index.html": "/costumedesigners/index.html",
-    "main.ad712cdd.css.map": "/costumedesigners/static/css/main.ad712cdd.css.map",
-    "main.a1027a2c.js.map": "/costumedesigners/static/js/main.a1027a2c.js.map",
+    "main.9e5194f6.css.map": "/costumedesigners/static/css/main.9e5194f6.css.map",
+    "main.30a146a7.js.map": "/costumedesigners/static/js/main.30a146a7.js.map",
     "787.108167ee.chunk.js.map": "/costumedesigners/static/js/787.108167ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad712cdd.css",
-    "static/js/main.a1027a2c.js"
+    "static/css/main.9e5194f6.css",
+    "static/js/main.30a146a7.js"
   ]
 }
