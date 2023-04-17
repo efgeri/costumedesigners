@@ -7,7 +7,7 @@ const PersonInfo = ({ person, personInfo }) => {
 
     return (<>
     <li>{film.original_title}</li>
-    <img src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} alt={`${film.title}`}></img>
+    <img src={`https://image.tmdb.org/t/p/w185/${film.poster_path}`} alt={`${film.title}`}></img>
     {/* I have to figure out how to get a smaller film poster */}
     </>
     );
@@ -18,7 +18,7 @@ const PersonInfo = ({ person, personInfo }) => {
       <h4>Person Info</h4>
       <p>{person.id}</p>
       <p>{personInfo.name}</p>
-      <p>{getPersonFilmList}</p>
+      <p className="person-info">{getPersonFilmList}</p>
     </div>
   );
 };

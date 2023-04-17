@@ -82,7 +82,7 @@ const DataContainer = () => {
       <h2>Most popular movies of the decade</h2>
       <ul>{decadeListItems}</ul>
       <PeopleList  filmCrewData={filmCrewData} onPersonSelect={onPersonSelect}/>
-      {personInfo ? <PersonInfo className="person-info" person={selectedPerson} personInfo={personInfo}/> : null}
+      {personInfo ? <PersonInfo person={selectedPerson} personInfo={personInfo}/> : null}
     </div>
   );
 };
