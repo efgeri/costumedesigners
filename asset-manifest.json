@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/costumedesigners/static/css/main.6c2f59e0.css",
+    "main.js": "/costumedesigners/static/js/main.6dcc910c.js",
+    "static/js/787.108167ee.chunk.js": "/costumedesigners/static/js/787.108167ee.chunk.js",
+    "index.html": "/costumedesigners/index.html",
+    "main.6c2f59e0.css.map": "/costumedesigners/static/css/main.6c2f59e0.css.map",
+    "main.6dcc910c.js.map": "/costumedesigners/static/js/main.6dcc910c.js.map",
+    "787.108167ee.chunk.js.map": "/costumedesigners/static/js/787.108167ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c2f59e0.css",
+    "static/js/main.6dcc910c.js"
+  ]
+}
