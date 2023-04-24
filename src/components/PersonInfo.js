@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const PersonInfo = ({ person, personInfo }) => {
-    console.log(personInfo)
-    console.log(personInfo.credits)
+const PersonInfo = ({ person, personInfo, getFilmInfoSheet }) => {
+  console.log(person)
+  
   const getPersonFilmList = personInfo.credits.crew.map((film) => {
 
     return (<>
     <div className="moviebox"><li className="movietitle"><strong>{film.original_title}</strong></li>
-    <img src={`https://image.tmdb.org/t/p/w780/${film.poster_path}`} alt={`${film.title}`}></img>
+    <img onClick={() => {getFilmInfoSheet(film.id)}} src={`https://image.tmdb.org/t/p/w780/${film.poster_path}`} alt={`${film.title}`}></img>
     {/* I have to figure out how to get a smaller film poster */}</div>
     </>
     );

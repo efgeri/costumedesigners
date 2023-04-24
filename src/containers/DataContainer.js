@@ -2,7 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import PeopleList from "../components/PeopleList";
 import PersonInfo from "../components/PersonInfo";
+import FilmInfo from "../components/FilmInfo";
 import styled from "styled-components";
+
 
 const DataContainer = () => {
   const apikey = process.env.REACT_APP_KEY;
@@ -10,7 +12,9 @@ const DataContainer = () => {
   const [filmCrewData, setFilmCrewData] = useState([]);
   const [selectedPerson, setSelectedPerson] = useState('');
   const [personInfo, setPersonInfo] = useState(null);
+  const [filmInfoSheet, setFilmInfo] = useState(null);
   const [counter, setCounter] = useState(0);
+  
 
   useEffect(() => {
     loadFilmCrewData();
@@ -59,6 +63,17 @@ const DataContainer = () => {
       setCounter(copyCounter)
   };
 
+  const getFilmInfoSheet = (filmid) => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${filmid}?api_key=${apikey}&language=en-US`)
+      .then((res) => res.json())
+      .then((filmInfo) => {
+        setFilmInfo(filmInfo);
+      });
+
+    
+  }
+
   const onPersonSelect = function(person) {
     setSelectedPerson(person)
     loadSelectedPerson(person)
@@ -67,6 +82,7 @@ const DataContainer = () => {
   const decadeListItems = decadeList.map((film) => {
     return <li>{film.title}</li>;
   });
+  console.log(filmInfoSheet)
 
   return (
     <>
@@ -84,7 +100,8 @@ const DataContainer = () => {
       <h2>Most popular movies of the decade</h2>
       <ul>{decadeListItems}</ul>
       <PeopleList  filmCrewData={filmCrewData} onPersonSelect={onPersonSelect}/>
-      {personInfo ? <PersonInfo person={selectedPerson} personInfo={personInfo}/> : null}
+      {personInfo ? <PersonInfo getFilmInfoSheet={getFilmInfoSheet} person={selectedPerson} personInfo={personInfo}/> : null}
+      {filmInfoSheet ? <FilmInfo filmInfo={filmInfoSheet}/> : null}
       <h3>Number of requests since refresh: {counter}</h3>
       </>
   );
