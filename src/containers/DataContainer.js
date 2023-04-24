@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import PeopleList from "../components/PeopleList";
 import PersonInfo from "../components/PersonInfo";
+import styled from "styled-components";
 
 const DataContainer = () => {
   const apikey = process.env.REACT_APP_KEY;
@@ -68,9 +69,9 @@ const DataContainer = () => {
   });
 
   return (
-    <div>
-      <h1>Number of requests since refresh: {counter}</h1>
+    <>
       {/* <button onClick={() => {loadFilmCrewData()}}>Load film crew</button> */}
+    <NavBar className="navigation">
       <button onClick={() => {loadDecade(1950, 1959)}}>Load 50s film crew</button>
       <button onClick={() => {loadDecade(1960, 1969)}}>Load 60s film crew</button>
       <button onClick={() => {loadDecade(1970, 1979)}}>Load 70s film crew</button>
@@ -79,12 +80,24 @@ const DataContainer = () => {
       <button onClick={() => {loadDecade(2000, 2009)}}>Load 00s film crew</button>
       <button onClick={() => {loadDecade(2010, 2019)}}>Load 2010s film crew</button>
       <button onClick={() => {loadDecade(2020, 2023)}}>Load 2020s film crew</button>
+    </NavBar>
       <h2>Most popular movies of the decade</h2>
       <ul>{decadeListItems}</ul>
       <PeopleList  filmCrewData={filmCrewData} onPersonSelect={onPersonSelect}/>
       {personInfo ? <PersonInfo person={selectedPerson} personInfo={personInfo}/> : null}
-    </div>
+      <h3>Number of requests since refresh: {counter}</h3>
+      </>
   );
 };
 
 export default DataContainer;
+
+const NavBar = styled.nav`
+background-color: var(--clr-accent);
+display: flex;
+flex-wrap: wrap;
+padding: 2em;
+justify-content: space-between;
+`
+
+

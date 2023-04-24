@@ -7,10 +7,6 @@ padding: 3%;
   pointer-events: none;
 }
 
-.person-info{
-  display: flex;
-  flex-wrap: wrap ;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

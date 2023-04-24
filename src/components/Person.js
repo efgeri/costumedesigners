@@ -13,9 +13,9 @@ const Person = ({items, onPersonSelect}) => {
 
 
     return (
-        <div>
+        <>
         {getCostumePerson}
-        </div>
+        </>
         )
 }
 

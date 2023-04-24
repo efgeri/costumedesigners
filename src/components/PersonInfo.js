@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const PersonInfo = ({ person, personInfo }) => {
     console.log(personInfo)
@@ -6,21 +7,28 @@ const PersonInfo = ({ person, personInfo }) => {
   const getPersonFilmList = personInfo.credits.crew.map((film) => {
 
     return (<>
-    <li>{film.original_title}</li>
-    <img src={`https://image.tmdb.org/t/p/w185/${film.poster_path}`} alt={`${film.title}`}></img>
-    {/* I have to figure out how to get a smaller film poster */}
+    <div className="moviebox"><li className="movietitle"><strong>{film.original_title}</strong></li>
+    <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={`${film.title}`}></img>
+    {/* I have to figure out how to get a smaller film poster */}</div>
     </>
     );
   });
 
   return (
     <div>
-      <h4>Person Info</h4>
-      <p>{person.id}</p>
+      <h4>Movies they worked on</h4>
       <p>{personInfo.name}</p>
-      <p className="person-info">{getPersonFilmList}</p>
+      <FlexList className="person-info">{getPersonFilmList}</FlexList>
     </div>
   );
 };
 
 export default PersonInfo;
+
+const FlexList = styled.ul`
+display: flex;
+flex-wrap: wrap;
+line-height: 2;
+list-style: none;
+width: 100%
+`

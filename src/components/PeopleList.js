@@ -1,5 +1,6 @@
 import React from "react";
 import Person from "./Person";
+import styled from "styled-components";
 
 const PeopleList = ({ filmCrewData, onPersonSelect }) => {
   const peopleListItems = filmCrewData.map((items, index) => {
@@ -9,9 +10,16 @@ const PeopleList = ({ filmCrewData, onPersonSelect }) => {
   return (
     <>
       <h3>PeopleList </h3>
-      <ul>{peopleListItems}</ul>
+      <List>{peopleListItems}</List>
     </>
   );
 };
 
 export default PeopleList;
+
+const List = styled.ul`
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+`
