@@ -110,3 +110,9 @@ button:disabled {
 /* .movietitles {
   
 } */
+
+@media (max-width: 800px) {
+  .moviebox {
+    width: 100%;
+  }
+}

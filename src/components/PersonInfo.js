@@ -8,7 +8,7 @@ const PersonInfo = ({ person, personInfo }) => {
 
     return (<>
     <div className="moviebox"><li className="movietitle"><strong>{film.original_title}</strong></li>
-    <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={`${film.title}`}></img>
+    <img src={`https://image.tmdb.org/t/p/w780/${film.poster_path}`} alt={`${film.title}`}></img>
     {/* I have to figure out how to get a smaller film poster */}</div>
     </>
     );
