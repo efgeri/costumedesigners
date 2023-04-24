@@ -8,7 +8,7 @@ const PersonInfo = ({ person, personInfo, getFilmInfoSheet }) => {
 
     return (<>
     <div className="moviebox"><li className="movietitle"><strong>{film.original_title}</strong></li>
-    <img onClick={() => {getFilmInfoSheet(film.id)}} src={`https://image.tmdb.org/t/p/w780/${film.poster_path}`} alt={`${film.title}`}></img>
+    <a href="/#filminfo"><img onClick={() => {getFilmInfoSheet(film.id)}} src={`https://image.tmdb.org/t/p/w780/${film.poster_path}`} alt={`${film.title}`}></img></a>
     {/* I have to figure out how to get a smaller film poster */}</div>
     </>
     );

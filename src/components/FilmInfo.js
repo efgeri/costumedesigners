@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FilmInfo = ({filmInfo}) => {
     console.log(filmInfo)
     return ( 
-        <section className="filmsheet">
+        <section className="filmsheet" id="filminfo" >
         <h1><a target="_blank" href={`https://www.imdb.com/title/${filmInfo.imdb_id}`}>{filmInfo.title}</a></h1>
         <StyledList>
             <li>{filmInfo.overview}</li>

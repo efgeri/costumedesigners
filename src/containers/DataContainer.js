@@ -102,7 +102,7 @@ const DataContainer = () => {
       <PeopleList  filmCrewData={filmCrewData} onPersonSelect={onPersonSelect}/>
       {personInfo ? <PersonInfo getFilmInfoSheet={getFilmInfoSheet} person={selectedPerson} personInfo={personInfo}/> : null}
       {filmInfoSheet ? <FilmInfo filmInfo={filmInfoSheet}/> : null}
-      <h3>Number of requests since refresh: {counter}</h3>
+      <h3 id="filminfo">Number of requests since refresh: {counter}</h3>
       </>
   );
 };
